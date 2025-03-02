@@ -44,10 +44,10 @@ function setupFilters(films) {
     sortButton.addEventListener("click", () => {
         let sortedFilms;
         if (isDescending) {
-            sortedFilms = films.slice().sort((a, b) => a.rank - b.rank);
+            sortedFilms = films.slice().sort((a, b) => b.rank - a.rank);
             sortButton.textContent = "Sort by Box Office (Ascending)";
         } else {
-            sortedFilms = films.slice().sort((a, b) => b.rank - a.rank);
+            sortedFilms = films.slice().sort((a, b) => a.rank - b.rank);
             sortButton.textContent = "Sort by Box Office (Descending)";
         }
         isDescending = !isDescending;
